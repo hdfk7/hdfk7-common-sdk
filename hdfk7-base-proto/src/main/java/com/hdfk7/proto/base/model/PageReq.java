@@ -10,6 +10,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
+@Schema(description = "分页请求实体")
 public class PageReq<T> extends BaseModel {
     @Min(1)
     @Max(1000)

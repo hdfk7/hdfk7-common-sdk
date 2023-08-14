@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
+@Schema(description = "响应实体")
 public class Result<T> implements Serializable {
     @Schema(description = "响应CODE")
     private int code;
