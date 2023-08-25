@@ -3,10 +3,12 @@ package com.hdfk7.proto.base.result;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.hdfk7.proto.base.util.JsonUtil;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
+@Getter
 @Schema(description = "响应实体")
 public class Result<T> implements Serializable {
     @Schema(description = "响应CODE")
@@ -45,18 +47,6 @@ public class Result<T> implements Serializable {
     public Result<T> bindCode(int code) {
         this.code = code;
         return this;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public String getMsg() {
-        return msg;
     }
 
     @JsonIgnore
