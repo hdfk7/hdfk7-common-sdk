@@ -1,9 +1,8 @@
 package com.hdfk7.proto.base.result;
 
+import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.hdfk7.proto.base.util.JsonUtil;
 
 import java.util.List;
 
@@ -44,20 +43,21 @@ public enum ResultCode {
     }
 
     public <T> Result<T> bindResult(Object data, Class<T> clazz) {
-        T o = JsonUtil.toObject(data, new TypeReference<T>() {
-        });
+        T o = JSONUtil.toBean(JSONUtil.toJsonStr(data), clazz);
         return new Result<T>().bindCode(this.code).bindMsg(this.msg).bindData(o);
     }
 
     public <T> Result<List<T>> bindResult(List<?> data, Class<T> clazz) {
-        List<T> o = JsonUtil.toObject(data, new TypeReference<List<T>>() {
-        });
+        List<T> o = JSONUtil.toList(JSONUtil.toJsonStr(data), clazz);
         return new Result<List<T>>().bindCode(this.code).bindMsg(this.msg).bindData(o);
     }
 
     public <T> Result<Page<T>> bindResult(PageDTO<?> page, Class<T> clazz) {
-        Page<T> o = JsonUtil.toObject(page, new TypeReference<Page<T>>() {
-        });
+        List<T> list = JSONUtil.toList(JSONUtil.toJsonStr(page.getRecords()), clazz);
+        page.setRecords(null);
+        //noinspection unchecked
+        Page<T> o = JSONUtil.toBean(JSONUtil.toJsonStr(page), Page.class);
+        o.setRecords(list);
         return new Result<Page<T>>().bindCode(this.code).bindMsg(this.msg).bindData(o);
     }
 

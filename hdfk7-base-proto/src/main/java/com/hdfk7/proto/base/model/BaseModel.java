@@ -1,10 +1,10 @@
 package com.hdfk7.proto.base.model;
 
-import com.hdfk7.proto.base.util.JsonUtil;
+import cn.hutool.json.JSONUtil;
 
 public abstract class BaseModel {
     @Override
     public String toString() {
-        return JsonUtil.toJsonStr(this);
+        return JSONUtil.toJsonStr(this);
     }
 }
