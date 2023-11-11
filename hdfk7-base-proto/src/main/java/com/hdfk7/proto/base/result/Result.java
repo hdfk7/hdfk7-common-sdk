@@ -1,7 +1,7 @@
 package com.hdfk7.proto.base.result;
 
+import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.hdfk7.proto.base.util.JsonUtil;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
@@ -56,6 +56,6 @@ public class Result<T> implements Serializable {
 
     @Override
     public String toString() {
-        return JsonUtil.toJsonStr(this);
+        return JSONUtil.toJsonStr(this);
     }
 }
