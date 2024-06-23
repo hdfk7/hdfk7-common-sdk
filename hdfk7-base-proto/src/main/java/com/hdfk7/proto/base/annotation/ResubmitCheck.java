@@ -14,8 +14,6 @@ import java.lang.annotation.Target;
 public @interface ResubmitCheck {
     String value() default "";
 
-    int ttl() default 3;
-
     String[] methods() default {"POST", "PUT", "DELETE"};
 }
 
