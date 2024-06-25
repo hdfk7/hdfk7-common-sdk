@@ -3,9 +3,11 @@ package com.hdfk7.proto.base.result;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public enum ResultCode {
     SYS_ERROR(-1, "前方路滑请稍后再试"),
     SUCCESS(0, "成功"),
@@ -64,11 +66,4 @@ public enum ResultCode {
         return bindResult((T) null);
     }
 
-    public String getMsg() {
-        return msg;
-    }
-
-    public int getCode() {
-        return code;
-    }
 }

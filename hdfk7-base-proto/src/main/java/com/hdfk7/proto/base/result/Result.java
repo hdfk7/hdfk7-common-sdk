@@ -1,20 +1,26 @@
 package com.hdfk7.proto.base.result;
 
-import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hdfk7.proto.base.model.BaseModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.Serializable;
+import java.io.Serial;
 
 @Getter
 @Schema(description = "响应实体")
-public class Result<T> implements Serializable {
+public class Result<T> extends BaseModel {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Schema(description = "响应CODE")
     private int code;
+
     @Schema(description = "响应提示信息")
     private String msg;
+
     @Schema(description = "响应数据")
     private T data;
 
@@ -54,8 +60,4 @@ public class Result<T> implements Serializable {
         return this.code == ResultCode.SUCCESS.getCode();
     }
 
-    @Override
-    public String toString() {
-        return JSONUtil.toJsonStr(this);
-    }
 }

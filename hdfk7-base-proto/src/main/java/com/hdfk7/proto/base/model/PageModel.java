@@ -8,10 +8,16 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serial;
+
 @Setter
 @Getter
 @Schema(description = "分页请求实体")
 public class PageModel<T> extends BaseModel {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Min(1)
     @Max(1000)
     @NotNull
@@ -30,4 +36,5 @@ public class PageModel<T> extends BaseModel {
     public <E> PageDTO<E> of() {
         return new PageDTO<>(current, size);
     }
+
 }
