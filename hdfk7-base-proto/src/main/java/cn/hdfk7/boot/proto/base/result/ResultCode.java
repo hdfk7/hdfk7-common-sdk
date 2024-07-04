@@ -1,4 +1,4 @@
-package com.hdfk7.proto.base.result;
+package cn.hdfk7.boot.proto.base.result;
 
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

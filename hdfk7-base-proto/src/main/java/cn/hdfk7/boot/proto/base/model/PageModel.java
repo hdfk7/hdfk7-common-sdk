@@ -1,4 +1,4 @@
-package com.hdfk7.proto.base.model;
+package cn.hdfk7.boot.proto.base.model;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
 import io.swagger.v3.oas.annotations.media.Schema;

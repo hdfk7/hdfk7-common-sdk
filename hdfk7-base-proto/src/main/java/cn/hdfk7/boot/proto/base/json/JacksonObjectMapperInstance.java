@@ -1,4 +1,4 @@
-package com.hdfk7.proto.base.json;
+package cn.hdfk7.boot.proto.base.json;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.annotation.JsonInclude;

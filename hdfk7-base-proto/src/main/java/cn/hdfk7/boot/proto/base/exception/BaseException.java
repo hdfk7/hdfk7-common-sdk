@@ -1,6 +1,6 @@
-package com.hdfk7.proto.base.exception;
+package cn.hdfk7.boot.proto.base.exception;
 
-import com.hdfk7.proto.base.result.ResultCode;
+import cn.hdfk7.boot.proto.base.result.ResultCode;
 
 import java.io.Serial;
 

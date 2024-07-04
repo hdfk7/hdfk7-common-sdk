@@ -1,4 +1,4 @@
-package com.hdfk7.proto.base.annotation;
+package cn.hdfk7.boot.proto.base.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -1,7 +1,7 @@
-package com.hdfk7.proto.base.result;
+package cn.hdfk7.boot.proto.base.result;
 
+import cn.hdfk7.boot.proto.base.model.BaseModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.hdfk7.proto.base.model.BaseModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
