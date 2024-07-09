@@ -13,7 +13,7 @@ import java.io.Serial;
 @Setter
 @Getter
 @Schema(description = "分页请求实体")
-public class PageModel<T> extends BaseModel {
+public abstract class PageModel extends BaseModel {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -28,10 +28,6 @@ public class PageModel<T> extends BaseModel {
     @NotNull
     @Schema(description = "当前页")
     private long current = 1;
-
-    @NotNull
-    @Schema(description = "查询条件")
-    public T query;
 
     public <E> PageDTO<E> of() {
         return new PageDTO<>(current, size);
