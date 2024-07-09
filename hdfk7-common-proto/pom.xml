@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>hdfk7-common-proto</artifactId>
-    <version>1.0.8-SNAPSHOT</version>
+    <version>1.0.9-SNAPSHOT</version>
     <name>hdfk7-common-proto</name>
     <url>https://blog.csdn.net/qq_37157160/article/details/104988331</url>
     <description>
@@ -38,7 +38,7 @@
     </scm>
 
     <properties>
-        <hdfk7-base-proto.version>1.0.8-SNAPSHOT</hdfk7-base-proto.version>
+        <hdfk7-base-proto.version>1.0.9-SNAPSHOT</hdfk7-base-proto.version>
     </properties>
 
     <dependencies>

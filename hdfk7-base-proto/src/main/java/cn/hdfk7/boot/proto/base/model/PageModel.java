@@ -12,7 +12,6 @@ import java.io.Serial;
 
 @Setter
 @Getter
-@Schema(description = "分页请求实体")
 public abstract class PageModel extends BaseModel {
 
     @Serial
