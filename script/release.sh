@@ -1,7 +1,7 @@
 #!/bin/bash -ile
 
 export module=hdfk7-common-sdk
-export version=1.0.9
+export version=1.0.10
 
 work=$(pwd)
 export target="target"
