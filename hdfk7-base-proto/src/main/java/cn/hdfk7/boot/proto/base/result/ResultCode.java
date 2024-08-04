@@ -1,7 +1,7 @@
 package cn.hdfk7.boot.proto.base.result;
 
+import cn.hdfk7.boot.proto.base.model.Page;
 import cn.hutool.json.JSONUtil;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
 import lombok.Getter;
 
