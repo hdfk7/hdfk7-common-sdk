@@ -5,18 +5,17 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.PageDTO;
 
 import java.util.List;
 
-public interface BaseMapstruct<D, V> {
+public interface BaseMapstruct<S, T> {
+    T source2target(S parm);
 
-    V d2v(D source);
+    S target2source(T parm);
 
-    D v2d(V source);
+    List<T> source2target(List<S> parm);
 
-    List<V> d2v(List<D> source);
+    List<S> target2source(List<T> parm);
 
-    List<D> v2d(List<V> source);
+    Page<T> source2target(PageDTO<S> parm);
 
-    Page<V> d2v(PageDTO<D> source);
-
-    Page<D> v2d(PageDTO<V> source);
+    Page<S> target2source(PageDTO<T> parm);
 
 }
