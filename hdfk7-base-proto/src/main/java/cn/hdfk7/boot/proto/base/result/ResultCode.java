@@ -53,10 +53,10 @@ public enum ResultCode {
         return new Result<List<T>>().bindCode(this.code).bindMsg(this.msg).bindData(o);
     }
 
+    @SuppressWarnings("unchecked")
     public <T> Result<Page<T>> bindResult(PageDTO<?> page, Class<T> clazz) {
         List<T> list = JSONUtil.toList(JSONUtil.toJsonStr(page.getRecords()), clazz);
         page.setRecords(null);
-        //noinspection unchecked
         Page<T> o = JSONUtil.toBean(JSONUtil.toJsonStr(page), Page.class);
         o.setRecords(list);
         return new Result<Page<T>>().bindCode(this.code).bindMsg(this.msg).bindData(o);
