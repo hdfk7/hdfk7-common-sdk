@@ -1,5 +1,5 @@
 $module = "hdfk7-base-proto"
-$version = "1.1.1"
+$version = "1.1.2"
 
 $work = Get-Location
 $target = "target"

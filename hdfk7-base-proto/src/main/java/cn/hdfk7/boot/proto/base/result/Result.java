@@ -1,10 +1,10 @@
 package cn.hdfk7.boot.proto.base.result;
 
 import cn.hdfk7.boot.proto.base.model.BaseModel;
+import cn.hutool.core.util.StrUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
-import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serial;
 
@@ -37,7 +37,7 @@ public class Result<T> extends BaseModel {
     }
 
     public Result(ResultCode resultCode, String message, T data) {
-        bindCode(resultCode.getCode()).bindMsg(StringUtils.isEmpty(message) ? resultCode.getMsg() : message).bindData(data);
+        bindCode(resultCode.getCode()).bindMsg(StrUtil.isEmpty(message) ? resultCode.getMsg() : message).bindData(data);
     }
 
     public Result<T> bindData(T data) {
